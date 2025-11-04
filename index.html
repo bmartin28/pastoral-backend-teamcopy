@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastoral Care System - Team 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">Pastoral Care <span class="add-icon">+</span></h1>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">STUDENT MANAGEMENT</div>
+                    <a href="#" class="nav-item active">
+                        <span class="nav-icon">☰</span>
+                        <span>Students</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">⊞</span>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📋</span>
+                        <span>Cases</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📊</span>
+                        <span>Reports</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📄</span>
+                        <span>Documents</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📅</span>
+                        <span>Appointments</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">SUPPORT</div>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">💬</span>
+                        <span>Contacts</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">📹</span>
+                        <span>Meetings</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">👥</span>
+                        <span>Support Groups</span>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">👤</span>
+                        <span>Staff</span>
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">TOOLS</div>
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">⚙️</span>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="footer-btn">📷</button>
+                <button class="footer-btn">⚙️</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header Bar -->
+            <header class="top-header-bar">
+                <div class="header-right">
+                    <span>Pastoral Care System V1 <span class="edit-icon">✎</span></span>
+                    <span>Reporting ON <span class="toggle-icon">○</span></span>
+                </div>
+            </header>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab active" id="tableTab">Student List</button>
+                </div>
+                <div class="action-bar">
+                    <button class="action-btn">
+                        <span class="action-icon">⊞</span>
+                        <span>Table Settings</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">🔽</span>
+                        <span>Filter</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">⬇</span>
+                        <span>Export</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="table-wrapper">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Student ID <span class="sort-icon">⇅</span></th>
+                                <th>Name <span class="sort-icon">⇅</span></th>
+                                <th>Course <span class="sort-icon">⇅</span></th>
+                                <th>Year <span class="sort-icon">⇅</span></th>
+                                <th>Contact <span class="sort-icon">⇅</span></th>
+                                <th>Last Contact <span class="sort-icon">⇅</span></th>
+                                <th>Status <span class="sort-icon">⇅</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="filter-row">
+                            <tr>
+                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                <td><select class="filter-select"><option>Select</option></select></td>
+                                <td><select class="filter-select"><option>Select</option></select></td>
+                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                <td>
+                                    <select class="filter-select">
+                                        <option>Select</option>
+                                    </select>
+                                    <span class="filter-icon">🔽</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody class="data-rows">
+                            <tr>
+                                <td>ST001</td>
+                                <td><span class="project-icon">▶</span> John Smith</td>
+                                <td><span class="participant-badge">CS</span> Computer Science</td>
+                                <td>Year 2</td>
+                                <td>john.smith@university.edu</td>
+                                <td>15.03.24</td>
+                                <td><span class="status-badge not-started">Needs Follow-up</span></td>
+                            </tr>
+                            <tr>
+                                <td>ST002</td>
+                                <td><span class="project-icon">▶</span> Sarah Johnson</td>
+                                <td><span class="participant-badge">EN</span> Engineering</td>
+                                <td>Year 1</td>
+                                <td>sarah.j@university.edu</td>
+                                <td>12.03.24</td>
+                                <td><span class="status-badge in-planning">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>ST003</td>
+                                <td><span class="project-icon">▶</span> Michael Brown</td>
+                                <td><span class="participant-badge">CS</span> Computer Science</td>
+                                <td>Year 3</td>
+                                <td>m.brown@university.edu</td>
+                                <td>18.03.24</td>
+                                <td><span class="status-badge in-progress">Active Support</span></td>
+                            </tr>
+                            <tr>
+                                <td>ST004</td>
+                                <td><span class="project-icon">▶</span> Emma Wilson</td>
+                                <td><span class="participant-badge">BA</span> Business Administration</td>
+                                <td>Year 2</td>
+                                <td>emma.w@university.edu</td>
+                                <td>10.03.24</td>
+                                <td><span class="status-badge completed">Resolved</span></td>
+                            </tr>
+                            <tr>
+                                <td>ST005</td>
+                                <td><span class="project-icon">▶</span> David Lee</td>
+                                <td><span class="participant-badge">EN</span> Engineering</td>
+                                <td>Year 4</td>
+                                <td>d.lee@university.edu</td>
+                                <td>20.03.24</td>
+                                <td><span class="status-badge not-started">New Case</span></td>
+                            </tr>
+                            <tr>
+                                <td>ST006</td>
+                                <td><span class="project-icon">▶</span> Lisa Anderson</td>
+                                <td><span class="participant-badge">CS</span> Computer Science</td>
+                                <td>Year 1</td>
+                                <td>l.anderson@university.edu</td>
+                                <td>17.03.24</td>
+                                <td><span class="status-badge in-progress">Active Support</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="7">
+                                    <div class="table-footer">
+                                        <span class="item-count">6 students</span>
+                                        <span class="footer-date">Last updated: 20.03.24</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Bottom Action Buttons -->
+            <div class="bottom-actions">
+                <button class="action-button primary">
+                    <span class="btn-icon">+</span>
+                    <span>Add Student</span>
+                </button>
+                <button class="action-button primary">
+                    <span class="btn-icon">+</span>
+                    <span>New Case</span>
+                </button>
+                <button class="action-button primary">
+                    <span class="btn-icon">+</span>
+                    <span>Schedule Appointment</span>
+                </button>
+                <button class="action-button primary">
+                    <span class="btn-icon">+</span>
+                    <span>Import</span>
+                </button>
+            </div>
+        </main>
+    </div>
+    <script src="dist/index.js"></script>
+</body>
+</html>

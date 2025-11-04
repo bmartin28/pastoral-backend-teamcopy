@@ -1,0 +1,22 @@
+{
+  "name": "typescript-web-page",
+  "version": "1.0.0",
+  "description": "A basic TypeScript web page",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "typescript",
+    "web",
+    "html"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
+
