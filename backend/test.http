@@ -1,0 +1,52 @@
+### GET all students
+GET http://localhost:5000/students
+
+### GET all student cases falling under query 'computing'
+GET http://localhost:5000/students/search?query=computing
+
+### GET all Students sorted by last updated
+GET http://localhost:5000/students?sort=lastUpdated&order=desc&limit=20&page=2
+
+### POST a new student
+POST http://localhost:5000/students
+Content-Type: application/json
+
+{
+  "caseId": "CASE-00123",
+  "name": "Alice",
+  "course": "Computing",
+  "year": 2
+}
+
+### PATCH – Add note to a student
+PATCH http://localhost:5000/students/CASE-00123/notes
+Content-Type: application/json
+
+{
+  "text": "Follow-up meeting scheduled for Monday.",
+  "author": "Tricia"
+}
+
+### PATCH - Change Case Status
+PATCH http://localhost:5000/students/CASE-00123/status
+Content-Type: application/json
+
+{
+  "status": "Closed"
+}
+
+### GET single student
+GET http://localhost:5000/students/CASE-00123
+
+### UPDATE student info
+PUT http://localhost:5000/students/CASE-00123
+Content-Type: application/json
+
+{
+  "year": 3,
+  "course": "Software Engineering"
+}
+
+### DELETE student
+DELETE http://localhost:5000/students/CASE-00123
+

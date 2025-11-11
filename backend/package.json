@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Pastoral API backend",
+  "main": "dist/app.js",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.1.10",
+    "@types/node": "^20.14.10",
+    "@types/express": "^5.0.5",
+    "@types/cors": "^2.8.19"
+  }
+}
