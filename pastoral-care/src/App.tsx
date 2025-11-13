@@ -3,11 +3,13 @@ import React, { useState } from "react";
 import Dashboard from "./Dashboard";
 import Students from "./Students";
 import Cases from "./Cases";
+import Triage from "./Triage";
 
 const pages = {
   dashboard: <Dashboard />,
   students: <Students />,
   cases: <Cases />,
+  triage: <Triage />,
   documents: <div>Documents Page Content</div>,
   appointments: <div>Appointments Page Content</div>,
   contacts: <div>Contacts Page Content</div>,

@@ -43,6 +43,10 @@
                 </div>
                 <div class="nav-section">
                     <div class="nav-section-title">SUPPORT</div>
+                    <a href="#" class="nav-item" data-section="triage">
+                        <span class="nav-icon">📧</span>
+                        <span>Triage</span>
+                    </a>
                     <a href="#" class="nav-item">
                         <span class="nav-icon">💬</span>
                         <span>Contacts</span>
@@ -105,104 +109,155 @@
                 </div>
             </div>
 
-            <!-- Data Table -->
-            <div class="table-wrapper">
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Student ID <span class="sort-icon">⇅</span></th>
-                                <th>Name <span class="sort-icon">⇅</span></th>
-                                <th>Course <span class="sort-icon">⇅</span></th>
-                                <th>Year <span class="sort-icon">⇅</span></th>
-                                <th>Contact <span class="sort-icon">⇅</span></th>
-                                <th>Last Contact <span class="sort-icon">⇅</span></th>
-                                <th>Status <span class="sort-icon">⇅</span></th>
-                            </tr>
-                        </thead>
-                        <tbody class="filter-row">
-                            <tr>
-                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
-                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
-                                <td><select class="filter-select"><option>Select</option></select></td>
-                                <td><select class="filter-select"><option>Select</option></select></td>
-                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
-                                <td><input type="text" placeholder="Search..." class="filter-input"></td>
-                                <td>
-                                    <select class="filter-select">
-                                        <option>Select</option>
-                                    </select>
-                                    <span class="filter-icon">🔽</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tbody class="data-rows">
-                            <tr>
-                                <td>ST001</td>
-                                <td><span class="project-icon">▶</span> John Smith</td>
-                                <td><span class="participant-badge">CS</span> Computer Science</td>
-                                <td>Year 2</td>
-                                <td>john.smith@university.edu</td>
-                                <td>15.03.24</td>
-                                <td><span class="status-badge not-started">Needs Follow-up</span></td>
-                            </tr>
-                            <tr>
-                                <td>ST002</td>
-                                <td><span class="project-icon">▶</span> Sarah Johnson</td>
-                                <td><span class="participant-badge">EN</span> Engineering</td>
-                                <td>Year 1</td>
-                                <td>sarah.j@university.edu</td>
-                                <td>12.03.24</td>
-                                <td><span class="status-badge in-planning">In Progress</span></td>
-                            </tr>
-                            <tr>
-                                <td>ST003</td>
-                                <td><span class="project-icon">▶</span> Michael Brown</td>
-                                <td><span class="participant-badge">CS</span> Computer Science</td>
-                                <td>Year 3</td>
-                                <td>m.brown@university.edu</td>
-                                <td>18.03.24</td>
-                                <td><span class="status-badge in-progress">Active Support</span></td>
-                            </tr>
-                            <tr>
-                                <td>ST004</td>
-                                <td><span class="project-icon">▶</span> Emma Wilson</td>
-                                <td><span class="participant-badge">BA</span> Business Administration</td>
-                                <td>Year 2</td>
-                                <td>emma.w@university.edu</td>
-                                <td>10.03.24</td>
-                                <td><span class="status-badge completed">Resolved</span></td>
-                            </tr>
-                            <tr>
-                                <td>ST005</td>
-                                <td><span class="project-icon">▶</span> David Lee</td>
-                                <td><span class="participant-badge">EN</span> Engineering</td>
-                                <td>Year 4</td>
-                                <td>d.lee@university.edu</td>
-                                <td>20.03.24</td>
-                                <td><span class="status-badge not-started">New Case</span></td>
-                            </tr>
-                            <tr>
-                                <td>ST006</td>
-                                <td><span class="project-icon">▶</span> Lisa Anderson</td>
-                                <td><span class="participant-badge">CS</span> Computer Science</td>
-                                <td>Year 1</td>
-                                <td>l.anderson@university.edu</td>
-                                <td>17.03.24</td>
-                                <td><span class="status-badge in-progress">Active Support</span></td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td colspan="7">
-                                    <div class="table-footer">
-                                        <span class="item-count">6 students</span>
-                                        <span class="footer-date">Last updated: 20.03.24</span>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tfoot>
-                    </table>
+            <!-- Student List Section (default) -->
+            <div id="student-list-section" class="content-section">
+                <div class="table-wrapper">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Student ID <span class="sort-icon">⇅</span></th>
+                                    <th>Name <span class="sort-icon">⇅</span></th>
+                                    <th>Course <span class="sort-icon">⇅</span></th>
+                                    <th>Year <span class="sort-icon">⇅</span></th>
+                                    <th>Contact <span class="sort-icon">⇅</span></th>
+                                    <th>Last Contact <span class="sort-icon">⇅</span></th>
+                                    <th>Status <span class="sort-icon">⇅</span></th>
+                                </tr>
+                            </thead>
+                            <tbody class="filter-row">
+                                <tr>
+                                    <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                    <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                    <td><select class="filter-select"><option>Select</option></select></td>
+                                    <td><select class="filter-select"><option>Select</option></select></td>
+                                    <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                    <td><input type="text" placeholder="Search..." class="filter-input"></td>
+                                    <td>
+                                        <select class="filter-select">
+                                            <option>Select</option>
+                                        </select>
+                                        <span class="filter-icon">🔽</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody class="data-rows">
+                                <tr>
+                                    <td>ST001</td>
+                                    <td><span class="project-icon">▶</span> John Smith</td>
+                                    <td><span class="participant-badge">CS</span> Computer Science</td>
+                                    <td>Year 2</td>
+                                    <td>john.smith@university.edu</td>
+                                    <td>15.03.24</td>
+                                    <td><span class="status-badge not-started">Needs Follow-up</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ST002</td>
+                                    <td><span class="project-icon">▶</span> Sarah Johnson</td>
+                                    <td><span class="participant-badge">EN</span> Engineering</td>
+                                    <td>Year 1</td>
+                                    <td>sarah.j@university.edu</td>
+                                    <td>12.03.24</td>
+                                    <td><span class="status-badge in-planning">In Progress</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ST003</td>
+                                    <td><span class="project-icon">▶</span> Michael Brown</td>
+                                    <td><span class="participant-badge">CS</span> Computer Science</td>
+                                    <td>Year 3</td>
+                                    <td>m.brown@university.edu</td>
+                                    <td>18.03.24</td>
+                                    <td><span class="status-badge in-progress">Active Support</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ST004</td>
+                                    <td><span class="project-icon">▶</span> Emma Wilson</td>
+                                    <td><span class="participant-badge">BA</span> Business Administration</td>
+                                    <td>Year 2</td>
+                                    <td>emma.w@university.edu</td>
+                                    <td>10.03.24</td>
+                                    <td><span class="status-badge completed">Resolved</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ST005</td>
+                                    <td><span class="project-icon">▶</span> David Lee</td>
+                                    <td><span class="participant-badge">EN</span> Engineering</td>
+                                    <td>Year 4</td>
+                                    <td>d.lee@university.edu</td>
+                                    <td>20.03.24</td>
+                                    <td><span class="status-badge not-started">New Case</span></td>
+                                </tr>
+                                <tr>
+                                    <td>ST006</td>
+                                    <td><span class="project-icon">▶</span> Lisa Anderson</td>
+                                    <td><span class="participant-badge">CS</span> Computer Science</td>
+                                    <td>Year 1</td>
+                                    <td>l.anderson@university.edu</td>
+                                    <td>17.03.24</td>
+                                    <td><span class="status-badge in-progress">Active Support</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7">
+                                        <div class="table-footer">
+                                            <span class="item-count">6 students</span>
+                                            <span class="footer-date">Last updated: 20.03.24</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Triage Section -->
+            <div id="triage-section" class="content-section" style="display: none;">
+                <div class="triage-container">
+                    <div class="triage-filters">
+                        <select id="triage-status-filter" class="filter-select">
+                            <option value="">All Statuses</option>
+                            <option value="New">New</option>
+                            <option value="Reviewed">Reviewed</option>
+                            <option value="Promoted">Promoted</option>
+                            <option value="Rejected">Rejected</option>
+                            <option value="Snoozed">Snoozed</option>
+                        </select>
+                        <select id="triage-confidence-filter" class="filter-select">
+                            <option value="">All Confidence Levels</option>
+                            <option value="0.75">High (75%+)</option>
+                            <option value="0.5">Medium (50%+)</option>
+                            <option value="0.25">Low (25%+)</option>
+                        </select>
+                    </div>
+                    <div class="triage-layout">
+                        <div class="triage-table-container">
+                            <table id="triage-table">
+                                <thead>
+                                    <tr>
+                                        <th>Received</th>
+                                        <th>From</th>
+                                        <th>Subject</th>
+                                        <th>Confidence</th>
+                                        <th>Student</th>
+                                        <th>Action</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="7" style="text-align: center; padding: 20px;">Loading...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="triage-detail-container">
+                            <div id="triage-detail">
+                                <p>Select an item to view details</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -228,5 +283,6 @@
         </main>
     </div>
     <script src="dist/index.js"></script>
+    <script src="dist/triage-ui.js"></script>
 </body>
 </html>

@@ -1,10 +1,41 @@
-version: '3.8'
-
 services:
-  web:
-    build: .
+  mongodb:
+    image: mongo:7
+    container_name: pastoral-mongodb
     ports:
-      - "8080:8080"
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=student_support
+    networks:
+      - pastoral-network
+
+  backend:
+    build: .
+    container_name: pastoral-backend
+    ports:
+      - "3000:3000"
     environment:
       - NODE_ENV=production
+      - PORT=3000
+      - MONGO_URL=mongodb://mongodb:27017
+      - DB_NAME=student_support
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    networks:
+      - pastoral-network
+    volumes:
+      - ./dist:/app/dist
+      - ./index.html:/app/index.html
+      - ./styles.css:/app/styles.css
+
+volumes:
+  mongodb_data:
+
+networks:
+  pastoral-network:
+    driver: bridge
 

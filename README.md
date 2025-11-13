@@ -76,10 +76,34 @@ docker stop <container-id>
 
 ### Project Structure
 
-- `index.html` - Main HTML file
-- `src/index.ts` - TypeScript source code
+- `index.html` - Main HTML file with dashboard UI
+- `src/index.ts` - Frontend TypeScript code
+- `src/server.ts` - Express backend server
+- `src/triage.ts` - Frontend triage UI component
+- `src/api/triage.ts` - Triage API endpoints
+- `src/services/pipeline.ts` - Email processing pipeline
+- `src/graph.ts` - Microsoft Graph API integration
+- `src/azureOpenAIModel.ts` - Azure OpenAI classification
 - `styles.css` - CSS styling
 - `tsconfig.json` - TypeScript configuration
 - `dist/` - Compiled JavaScript output (generated after build)
 - `Dockerfile` - Docker configuration for containerized deployment
-- `docker-compose.yml` - Docker Compose configuration for easy setup
+- `docker-compose.yml` - Docker Compose configuration with MongoDB
+- `SETUP.md` - Detailed setup guide for Azure and environment configuration
+
+### Configuration
+
+See `SETUP.md` for detailed instructions on:
+- Setting up Azure App Registration for Microsoft Graph
+- Configuring Azure OpenAI
+- Environment variables
+- API endpoints
+
+### Quick Start
+
+1. Install dependencies: `npm install`
+2. Create `.env` file (see `SETUP.md`)
+3. Build: `npm run build`
+4. Start: `npm start` or `docker-compose up`
+5. Access: http://localhost:3000
+6. Navigate to **Triage** section in the sidebar
